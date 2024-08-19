@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziyaretçi Kayıt Formu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">Ziyaretçi Kayıt Formu</div>
+        <div class="content">
+            <form id="visitorForm">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Tarih</span>
+                        <input type="text" id="tarih" readonly>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Ad Soyad</span>
+                        <input type="text" id="adSoyad" placeholder="Adınızı ve soyadınızı girin" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Geldiği Firma Bilgisi</span>
+                        <input type="text" id="firmaBilgisi" placeholder="Geldiğiniz firmayı girin" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Geldiği Şehir Bilgisi</span>
+                        <select id="citySelect" required>
+                            <option value="" disabled selected>Şehir Seçin</option>
+                            <!-- Şehirler JSON dosyasından yüklenecek -->
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Geldiği Ulaşım Aracı</span>
+                        <select id="ulasim" required>
+                            <option value="" disabled selected>Ulaşım Aracı Seçin</option>
+                            <!-- Ulaşım araçları JSON dosyasından yüklenecek -->
+                        </select>
+                    </div>
+                    <div id="electricQuestion" class="input-box" style="display: none;">
+                        <span class="details">Araç Elektrikli mi?</span>
+                        <select id="electricVehicle">
+                            <option value="" disabled selected>Seçin</option>
+                            <option value="Evet">Evet</option>
+                            <option value="Hayır">Hayır</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Ortalama KM Bilgisi</span>
+                        <input type="text" id="ortalamaKm" placeholder="Ortalama km bilgisi girin">
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Kaydet">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
